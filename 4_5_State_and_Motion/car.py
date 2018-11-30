@@ -82,6 +82,22 @@ class Car(object):
         self.state[1] = predicted_velocity
     
     
+    
+    ## TODO: Write the turn_right function
+    ## Hint: Use turn_left for inspiration!
+    def turn_right(self):
+        # Change the velocity
+        velocity = self.state[1]
+        
+        predicted_velocity = [
+            velocity[1],
+            -velocity[0]
+        ]
+        
+        # Update the state velocity
+        self.state[1] = predicted_velocity
+    
+    
     # Helper function for displaying the world + robot position
     # Assumes the world in a 2D numpy array and position is in the form [y, x]
     # path is a list of positions, and it's an optional argument
